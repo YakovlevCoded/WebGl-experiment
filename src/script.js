@@ -70,15 +70,15 @@ scene.add(mesh1, mesh2, mesh3);
 const sectionMeshes = [mesh1, mesh2, mesh3];
 
 // particles
-const particlesCount = 20;
+const particlesCount = 30;
 
 for (let i = 0; i < particlesCount; i++) {
-  const geo1 = new THREE.BoxGeometry(0.3, 0.3, 0.3);
+  const geo1 = new THREE.SphereGeometry(0.1, 32, 32);
 
   const mesh = new THREE.Mesh(geo1, material);
-  mesh.position.x = (Math.random() - 0.5) * 15;
-  mesh.position.y = objectDistance * 0.5 - Math.random() * objectDistance * 3.5;
-  mesh.position.z = (Math.random() - 0.5) * 15;
+  mesh.position.x = (Math.random() - 0.5) * 20;
+  mesh.position.y = objectDistance * 0.5 - Math.random() * objectDistance * 4;
+  mesh.position.z = (Math.random() - 0.5) * 20;
   scene.add(mesh);
 }
 
